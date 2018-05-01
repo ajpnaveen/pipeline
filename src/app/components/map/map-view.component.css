@@ -1,0 +1,50 @@
+#maps-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: calc(100% - 1px);
+    height: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 650px;
+    width: 100%;
+    overflow: hidden;
+  } */
+
+  #viewDiv {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Just to keep it at the very top */
+  }
+
+
+  #verIconHeader{
+    padding: 0;
+    margin: 0;
+    right:10px;   
+    height: 50px;
+    width: 50px;
+    overflow: auto;
+  }
+  
+.float{
+	position:fixed;
+	width:40px;
+	height:40px;
+	top:40px;
+  right:10px;
+  z-index: 10;
+}
+
+.my-float{
+	margin-top:22px;
+}
