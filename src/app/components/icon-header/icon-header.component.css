@@ -1,0 +1,120 @@
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/* Hide the browser's default radio button */
+
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+/* Create a custom radio button */
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+
+.container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+
+.container input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+/* Style the indicator (dot/circle) */
+
+.container .checkmark:after {
+	top: 3px;
+	left: 3px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: red;
+}
+#rcorners4 {
+	top: 3px;
+	border-radius: 15px;
+	background: #73AD21;
+	padding: 20px;
+	height: 450px;
+	right: 90px;
+}
+label {
+	color: yellow;
+	font-family: "Times New Roman";
+	opacity: 1;
+}
+.panel-header-title {
+	text-align: left;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 90%;
+	color: yellow;
+}
+.my-legend .legend-title {
+	text-align: left;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 90%;
+	color: yellow;
+}
+.my-legend .legend-scale ul {
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 0;
+	float: left;
+	list-style: none;
+}
+.my-legend .legend-scale ul li {
+	font-size: 80%;
+	list-style: none;
+	margin-left: 0;
+	line-height: 18px;
+	margin-bottom: 2px;
+	color: yellow;
+}
+.my-legend ul.legend-labels li span {
+	display: block;
+	float: left;
+	height: 16px;
+	width: 30px;
+	margin-right: 5px;
+	margin-left: 0;
+	opacity: 1;
+}
+.my-legend .legend-source {
+	font-size: 70%;
+	color: yellow;
+	clear: both;
+}
+.my-legend a {
+	color: yellow;
+}

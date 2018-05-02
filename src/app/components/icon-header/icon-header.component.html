@@ -2,17 +2,61 @@
 <div class="collapse" id="content1">
      Content goes here.
 </div> -->
-    
-    <div  class="container-fluid">
-        <div class="row">
-            <div class="col-sm">
-                <img src="assets/images/layers1.png" alt="Layers Icon" align="right" style="width:36px;height:36px;" (click)="layersFunc()">
-            </div>
+<div class="container-fluid" style="float:right">
+        <img src="assets/images/layers1.png" alt="Layers Icon" style="width:36px;height:36px;" (click)="layersFunc()">
+<!-- 	<div class="row">
+		<div class="col-sm">
+			<img src="assets/images/layers1.png" alt="Layers Icon" align="right" style="width:36px;height:36px;" (click)="layersFunc()">
         </div>
-    
-        <div class="row">
+        
+	</div> -->
+	<!-- 
+                <div class="row">
             <div class="col-sm">
                 <img src="assets/images/configuration.png" alt="HTML5 Icon" align="right" style="width:36px;height:36px;">
             </div>
-        </div>
-    </div>
+        </div> --></div>
+<!-- <div class="panel panel-primary" style= "background-color: black;  opacity: 0.6" id="rcorners4" *ngIf="bDisplayLayersPanel"> -->
+<div style="background-color: black;  opacity: 0.6; float:left " id="rcorners4" *ngIf="bDisplayLayersPanel">
+	<button type="button" class="close" aria-label="Close" (click)="closeLayersPanel()"> <span aria-hidden="true">&times;</span>
+	</button>
+	<div class="panel-header-title">Pipeline Layers</div>
+	<div class="panel-body">
+		<label class="container">Synthesized Risk Layer
+			<input type="radio" checked="checked" name="radio"> <span class="checkmark"></span>
+		</label>
+		<label class="container">CO2 Mole Percent
+			<input type="radio" name="radio"> <span class="checkmark"></span>
+		</label>
+		<label class="container">H2S PPM
+			<input type="radio" name="radio"> <span class="checkmark"></span>
+		</label>
+		<label class="container">Sulfate Reducing Bacteria
+			<input type="radio" name="radio"> <span class="checkmark"></span>
+		</label>
+		<label class="container">Acid Producing Bacteria
+			<input type="radio" name="radio"> <span class="checkmark"></span>
+		</label>
+		<label class="container">Water Dew Point
+			<input type="radio" name="radio"> <span class="checkmark"></span>
+		</label>
+		<label class="container">Oxygen
+			<input type="radio" name="radio"> <span class="checkmark"></span>
+		</label>
+		<label class="container">Percent SMYS
+			<input type="radio" name="radio"> <span class="checkmark"></span>
+		</label>
+	</div>
+	<div class="panel-footer">
+		<div class='my-legend'>
+			<div class='legend-title'>Legend</div>
+			<div class='legend-scale'>
+				<ul class='legend-labels'>
+					<li><span style='background: red'></span>Highly Corrosive</li>
+					<li><span style='background: orange'></span>Mooderately Corrosive</li>
+					<li><span style='background: green'></span>Not Corrosive</li>
+				</ul>
+			</div>
+			<!-- <div class='legend-source'>Source: <a href="#link to source">Name of source</a></div> --></div>
+	</div>
+</div>

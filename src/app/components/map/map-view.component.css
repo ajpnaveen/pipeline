@@ -38,7 +38,7 @@
   
 .float{
 	position:fixed;
-	width:40px;
+	width:20%;
 	height:40px;
 	top:40px;
   right:10px;
@@ -47,4 +47,10 @@
 
 .my-float{
 	margin-top:22px;
+}
+
+
+.esri-ui-top-left {
+  bottom: 0 !important;
+  left: 0 !important;;
 }

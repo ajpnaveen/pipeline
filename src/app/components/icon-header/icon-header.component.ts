@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconHeaderComponent implements OnInit {
 
+  bDisplayLayersPanel: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
@@ -14,7 +16,15 @@ export class IconHeaderComponent implements OnInit {
 
   layersFunc()
   {
-    alert('I am here');
+    if(this.bDisplayLayersPanel == true)
+        this.bDisplayLayersPanel = false;
+    else
+      this.bDisplayLayersPanel = true;
+  }
+
+  closeLayersPanel()
+  {
+    this.bDisplayLayersPanel = false;
   }
 
 }

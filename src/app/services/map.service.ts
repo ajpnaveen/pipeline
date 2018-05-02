@@ -10,6 +10,8 @@ export class MapService {
   esriMap: any;
   esriMapView: any;
   searchWidget: any;
+  basemapToggleWidget: any;
+  zoomWidget: any;
 
   private _maps: any = {
       map1: {
@@ -33,12 +35,16 @@ export class MapService {
       return loadModules([
               'esri/Map',
               'esri/views/MapView',
-              'esri/widgets/Search'
+              'esri/widgets/Search',
+              "esri/widgets/BasemapToggle",
+              "esri/widgets/Zoom"
           ], options)
-          .then(([EsriMap, EsriMapView, Search]) => {
+          .then(([EsriMap, EsriMapView, Search, BasemapToggle, Zoom]) => {
               this.esriMap = EsriMap;
               this.esriMapView = EsriMapView;
               this.searchWidget= Search;
+              this.basemapToggleWidget = BasemapToggle;
+              this.zoomWidget = Zoom;
               this._maps.map1.map = this.esriMap({
                   basemap: 'streets'
               });
